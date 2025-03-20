@@ -78,9 +78,12 @@ void insertar(shared_ptr<list> &lista, int n, shared_ptr<nodo> &nuevo ){
 void imprime_lista(shared_ptr<list> &lista){
     int size=lista->size;
     shared_ptr<nodo> actual=lista->head;
-    cout<<"----------\nn° | valor\n----------"<<endl;
     for (int i=0; i<size;i++){
-        cout << i << "). [" << actual->value <<"]\n";
+        if(!actual->next){
+            cout <<"[" << actual->value <<"]-> nullptr"<<endl;
+            return;
+        }
+        cout <<"[" << actual->value <<"]->";
         actual=actual->next;
     }
     return;

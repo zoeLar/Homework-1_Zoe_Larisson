@@ -1,7 +1,5 @@
-#include <chrono>
-#include <iostream>
-using namespace std;
-#include <cstring>
+#include "ejercicio_4.h";
+
 
 bool comparar_texto(string texto_1, string texto_2,size_t size_1,size_t size_2, int i=0 ){
     if(size_1==0 && size_2==0)
@@ -74,14 +72,3 @@ void comparar_velocidad(string str1, string str2, const char * char1, const char
 }
 
 
-int main(void)
-{
-    string s="Buenos dias, como estas, espero que bien, nos vemos mañana cuando estes libre?";
-    string s2="Buenos dias, como estas, espero que bien, nos vemos mañana cuando estes libre?";
-    char * c1="Buenos dias, como estas, espero que bien, nos vemos mañana cuando estes libre?";
-    char * c2="Buenos dias, como estas, espero que bien, nos vemos mañana cuando estes libre?";
-    
-    comparar_velocidad(s,s2,c1,c2);
-    return 0;
-}
-//preguntar: hay q tener 4 funcs? o solo con dos q sean const estoy?

@@ -41,6 +41,24 @@ void logMessage(string mensaje, etiqueta etiq_message ){
         cerr<<"ERROR: No se pudo crear el archivo\n";
     archivo.close();
 }
+void logMessage(string Msj_error, string archivo_err, int linea_codigo ){
+    ofstream archivo("LogMessages.txt",ios ::app);
+
+    if(archivo.is_open())
+        archivo << "[ERROR]" << " = Mensaje: <" << Msj_error << "> - Archivo: <"<<archivo_err<<"> - Linea de codigo: <"<< linea_codigo<<">\n";
+    else
+        cerr<<"ERROR: No se pudo crear/abrir el archivo\n";
+    archivo.close();
+}
+
+void logMessage(string msj_Acceso, string n_usuario){
+    ofstream archivo("LogMessages.txt",ios ::app);
+    if(archivo.is_open())
+        archivo << "[SECURITY]" << " <" << msj_Acceso << "> USUARIO: ["<< n_usuario<<"]\n";
+    else
+        cerr<<"ERROR: No se pudo crear/abrir el archivo\n";
+    archivo.close();
+}
 
 etiqueta consigue_etiqueta(void){
     
@@ -86,6 +104,7 @@ etiqueta consigue_etiqueta(void){
     if(n_etiq==-1) return UNDEFINED;
     return etiq;
 }
+
 int main (void){
     
     int continuar=1;
@@ -101,13 +120,14 @@ int main (void){
 
         cin.ignore();
         getline(cin,mensaje);
-
         logMessage(mensaje, etiq);
 
         cout<< "Completado. Desea ingresar otro mensaje? \n [si=1] [no=0]"<<endl;
         cin >> continuar;
 
-        }
+    }
+
+
         
 }
     

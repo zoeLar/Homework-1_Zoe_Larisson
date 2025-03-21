@@ -1,7 +1,7 @@
-#include "ejercicio_4.h";
+#include "ejercicio_4.h"
 
 
-bool comparar_texto(string texto_1, string texto_2,size_t size_1,size_t size_2, int i=0 ){
+bool comparar_texto(string texto_1, string texto_2,int size_1,int size_2, int i){
     if(size_1==0 && size_2==0)
         return true;
     
@@ -16,9 +16,27 @@ bool comparar_texto(string texto_1, string texto_2,size_t size_1,size_t size_2, 
     
     return comparar_texto(texto_1,texto_2, size_1,size_2,i+=1);
 
+}//memoria dinamica
+
+bool comparar_texto(const char* texto_1, const char* texto_2, int size_1, int size_2, int i){
+    if(size_1==0 && size_2==0)
+        return true;
+    
+    if(size_1!=size_2)
+        return false;
+    
+    if(texto_1[i]!=texto_2[i])
+        return false;
+    
+    if ((size_1-1)==i)  
+        return true;
+    
+
+    return comparar_texto(texto_1,texto_2, size_1, size_2, i+=1);
+    
 }
 
-bool comparar_texto(const char* texto_1, const char* texto_2, int size_1, int size_2, int i=0){
+constexpr bool comparar_texto_comp(const char* texto_1, const char* texto_2, int size_1, int size_2, int i){
     if(size_1==0 && size_2==0)
         return true;
     

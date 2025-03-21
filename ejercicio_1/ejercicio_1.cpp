@@ -1,7 +1,6 @@
 
 #include "ejercicio_1.h";
 
-
 //ejercicio 1-a
 
 vector<vector<int>> create_matrix(int n){
@@ -36,17 +35,4 @@ void print_square_matrix(vector<vector<int>> matrix, int n){
 
     }
     return;
-}
-
-
-
-int main (void){
-    int n; //recibe input del usuario para el parametro n
-
-    cout << "ingrese el tamaño (n) de su matriz cuadrada (nxn): ";
-    cin >> n;
-    
-    vector<vector<int>> mine= create_matrix(n);
-    print_square_matrix(mine, n); 
-
 }

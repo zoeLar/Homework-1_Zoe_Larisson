@@ -1,6 +1,5 @@
 
 #include "ejercicio_1.h";
-
 //ejercicio 1-a
 
 vector<vector<int>> create_matrix(int n){
@@ -15,6 +14,8 @@ vector<vector<int>> create_matrix(int n){
     }
     return matrix;
 }
+
+//ejercicio 1-b
 
 void print_square_matrix(vector<vector<int>> matrix, int n){
     if(n==0){

@@ -1,4 +1,4 @@
-#include "ejercicio_1.h";
+#include "ejercicio_1.h"
 #include <iostream>
 using namespace std;
 

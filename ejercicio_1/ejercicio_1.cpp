@@ -1,5 +1,5 @@
 
-#include "ejercicio_1.h";
+#include "ejercicio_1.h"
 //ejercicio 1-a
 
 vector<vector<int>> create_matrix(int n){

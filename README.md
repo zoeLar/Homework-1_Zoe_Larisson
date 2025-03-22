@@ -8,3 +8,5 @@ por ejemplo:
 Si quiero ejecutar el ejercicio 1, primero entro a la carpeta y corro:
 g++ main1.cpp ejercicio_1.cpp -o programa
 ./programa
+
+(Se utiliza c++ version 17 y g++ version 11.4.0)

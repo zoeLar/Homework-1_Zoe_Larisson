@@ -1,4 +1,4 @@
-#include "ejercicio_2.h";
+#include "ejercicio_2.h"
 
 int main (void){
     

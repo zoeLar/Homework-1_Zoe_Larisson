@@ -29,7 +29,7 @@ int main (void){
     multiplicacion_pos(2,-32);
     //2-b (iii)
 
-    logMessage("Acceso denegado", "Maria Paz Janicki");
+    logMessage("Acceso denegado", "Hugo Carlos");
     logMessage("Access granted", "Zoe Larisson");
     
 }
